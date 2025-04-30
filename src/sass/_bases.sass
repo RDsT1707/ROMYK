@@ -1,0 +1,280 @@
+// =======================
+// Variables
+// =======================
+$primary-color: #f27bb5
+$text-color: #333
+$white: #fff
+$transition-speed: 0.3s
+
+body
+  font-family: 'Poppins', sans-serif
+
+// =======================
+// Mixins
+// =======================
+@mixin flex($direction: row, $justify: flex-start, $align: center)
+  display: flex
+  flex-direction: $direction
+  justify-content: $justify
+  align-items: $align
+
+// =======================
+// Header / Navbar
+// =======================
+header
+  @include flex(row, space-between)
+  position: sticky
+  top: 0
+  width: 100%
+  height: 80px
+  padding: 0 2rem
+  background-color: $white
+  border-bottom: 2px solid $primary-color
+  z-index: 1000
+
+  .logo
+    @include flex
+    height: 100%
+
+    img
+      height: 18px
+      width: auto
+
+  nav
+    @include flex
+    flex-grow: 1
+
+    ul
+      @include flex(row, center)
+      list-style: none
+      width: 100%
+      padding: 0
+
+      li
+        margin: 0 1rem
+
+        a
+          position: relative
+          text-decoration: none
+          color: $text-color
+          font-weight: 500
+          padding: 0.5rem 0
+          transition: color $transition-speed ease
+
+          &:hover
+            color: $primary-color
+
+            &:after
+              width: 100%
+
+          &:after
+            content: ''
+            position: absolute
+            bottom: -2px
+            left: 0
+            width: 0
+            height: 2px
+            background-color: $primary-color
+            transition: width $transition-speed ease
+
+  .login a
+    padding: 0.5rem 1rem
+    text-decoration: none
+    color: $text-color
+    font-weight: 500
+    transition: color $transition-speed ease
+
+    &:hover
+      color: $primary-color
+
+  .theme-toggle
+    @include flex
+    margin-left: 1rem
+    cursor: pointer
+    width: 24px
+    height: 24px
+    transition: background-color $transition-speed ease
+
+// =======================
+// Responsive Header
+// =======================
+@media (max-width: 768px)
+  header
+    padding: 0 1rem
+
+    nav ul li
+      margin: 0 0.5rem
+
+@media (max-width: 576px)
+  header
+    flex-wrap: wrap
+    height: auto
+    padding: 0.5rem
+
+    .logo
+      width: 100%
+      justify-content: center
+      margin-bottom: 0.5rem
+
+    nav
+      width: 100%
+      order: 3
+
+      ul
+        flex-wrap: wrap
+        justify-content: center
+
+        li
+          margin: 0.25rem 0.5rem
+
+    .login .theme-toggle
+      order: 2
+
+// =======================
+// Section Cream
+// =======================
+.Cream
+  @include flex(space-between)
+  padding: 4rem 2rem
+  max-width: 1200px
+  margin: 0 auto
+
+  @media (max-width: 768px)
+    flex-direction: column
+    text-align: center
+    padding: 2rem 1rem
+
+  &-section
+    flex: 1
+    padding-right: 2rem
+    padding-left: 145px
+
+    @media (max-width: 768px)
+      padding-right: 0
+      margin-bottom: 2rem
+
+    h1
+      font-size: 3rem
+      margin-bottom: 1rem
+      font-weight: 700
+      color: $text-color
+      line-height: 1.1
+
+    p
+      font-size: 0.8rem
+      line-height: 1.6
+      color: lighten($text-color, 20%)
+      margin-bottom: 2rem
+      padding-right: 130px
+
+    .cta-button
+      display: inline-block
+      background-color: $primary-color
+      color: $white
+      padding: 0.6rem 2rem
+      text-decoration: none
+      border-radius: 5px
+      font-weight: 500
+      transition: background-color $transition-speed, transform $transition-speed
+
+      &:hover
+        background-color: darken($primary-color, 10%)
+        transform: translateY(-3px)
+        box-shadow: 0 4px 10px rgba($primary-color, 0.3)
+
+      &:active
+        transform: translateY(-1px)
+
+  .hero-image
+    flex: 1
+    @include flex(center, center)
+    padding-right: 65px
+
+    img
+      max-width: 110%
+      height: auto
+
+// =======================
+// About Section
+// =======================
+.about
+  @include flex(space-between)
+  padding: 5rem 2rem
+  max-width: 1200px
+  margin: 0 auto
+  position: relative
+  padding-right: 65px
+
+  @media (max-width: 768px)
+    flex-direction: column
+    padding: 3rem 1rem
+
+  &-image
+    flex: 1
+    position: relative
+
+    img
+      max-width: 85%
+      height: auto
+      position: relative
+      z-index: 1
+      padding-left: 65px
+
+  &-content
+    flex: 1
+    padding-left: 4rem
+
+    @media (max-width: 768px)
+      padding-left: 0
+      margin-top: 2rem
+      text-align: center
+
+    h2
+      font-size: 2.5rem
+      font-weight: 700
+      color: $text-color
+      margin-bottom: 1.5rem
+      position: relative
+
+      &::after
+        content: ''
+        position: absolute
+        width: 80px
+        height: 3px
+        background-color: $primary-color
+        bottom: -10px
+        left: 0
+
+        @media (max-width: 768px)
+          left: 50%
+          transform: translateX(-50%)
+
+    p
+      font-size: 1rem
+      line-height: 1.7
+      margin-bottom: 2rem
+
+    .read-more
+      display: inline-block
+      background-color: $primary-color
+      color: $white
+      padding: 0.7rem 1.8rem
+      border-radius: 30px
+      text-decoration: none
+      font-weight: 500
+      transition: background-color $transition-speed, transform $transition-speed
+
+      &:hover
+        background-color: darken($primary-color, 10%)
+        transform: translateY(-3px)
+        box-shadow: 0 4px 10px rgba($primary-color, 0.3)
+
+      &:active
+        transform: translateY(-1px)
+
+.hourglass-icon
+  display: block
+  margin: 3rem auto
+  color: #7C3AED
+  width: 24px
+  height: 24px

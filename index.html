@@ -3,12 +3,13 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="public/css/style.css" />
+      <link rel="stylesheet" href="./public/css/style.css" />
+      <link rel="stylesheet" href="./src/main.css">
       <link
         rel="stylesheet"
-        href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
-      />
-      <script defer src="public/js/main.js"></script>
+        href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+      <script type="module" defer src="public/js/main.js"></script>
+      <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css"
     </head>
     <body>
       <header>
@@ -30,7 +31,8 @@
           <a href="login.html">Login</a>
         </div>
         <div class="theme-toggle">
-          <!-- Dark/Light  -->
+            <i class="fa-solid fa-moon" style="color: #000000;"></i>
+            <!-- Dark/Light  -->
         </div>
       </header>
 
@@ -38,7 +40,7 @@
         <!-- cream Section -->
         <section class="Cream">
           <div class="Cream-section">
-            <h1>Ice Cream</h1>
+            <h1>Ice<br>cream </h1>
             <p>
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
@@ -130,23 +132,21 @@
           <p>tempor incididunt ut labore et dolore magna aliqua</p>
           <div class="feature-cards">
             <div class="feature-card">
-              <div class="icon">🍦</div>
-              <h3>Cookies Ice Cream</h3>
+                <div class="icon"><img src="./public/assets/img/icon-1.png" alt=""></div>
+                <h3>Cookies Ice Cream</h3>
               <p>
                 commodo consequat. Duis aute irure dolor in reprehenderit in
                 voluptate velit esse cillum dolore eu fat
               </p>
             </div>
             <div class="feature-card">
-              <div class="icon">🍦</div>
+              <div class="icon"><img src="./public/assets/img/icon-2.png" alt=""></div>
               <h3>Cookies Ice Cream</h3>
-              <p>
-                commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fat
-              </p>
+              <p>commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fat</p>
             </div>
             <div class="feature-card">
-              <div class="icon">🍦</div>
+              <div class="icon"><img src="./public/assets/img/icon-1.png" alt=""></div>
               <h3>Cookies Ice Cream</h3>
               <p>
                 commodo consequat. Duis aute irure dolor in reprehenderit in
@@ -337,7 +337,6 @@
       </footer>
 
       <script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
-      <script src="./node_modules/bootstrap/dist/js/bootstrap.js²"></script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     </body>
   </html>
-</DOCTYPE>

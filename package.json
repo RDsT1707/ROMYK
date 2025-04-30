@@ -15,9 +15,10 @@
     "url": "https://github.com/RDsT1707/iceCream/issues"
   },
   "homepage": "https://github.com/RDsT1707/iceCream#readme",
-  "description": "",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.5"
-  }
+  },
+  "description": ""
 }
