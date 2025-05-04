@@ -5,6 +5,10 @@ $primary-color: #f27bb5
 $text-color: #333
 $white: #fff
 $transition-speed: 0.3s
+$dark-bg: #222222
+$light-text: #ffffff
+$input-bg: rgba(255, 255, 255, 0.1)
+$social-icon-size: 40px
 
 body
   font-family: 'Poppins', sans-serif
@@ -278,3 +282,607 @@ header
   color: #7C3AED
   width: 24px
   height: 24px
+
+// =======================
+// Featured Products
+// =======================
+.featured-products
+  padding: 4rem 2rem
+  max-width: 1100px
+  margin: 0 auto
+  text-align: center
+
+  h2
+    font-size: 2rem
+    font-weight: 700
+    color: $text-color
+    margin-bottom: 0.5rem
+    position: relative
+    text-align: left
+
+    &::after
+      content: ''
+      position: absolute
+      width: 80px
+      height: 4px
+      background-color: rgba($primary-color, 0.4)
+      bottom: 10px
+      left: 40%
+      transform: translateX(-50%)
+
+  p
+    font-size: 0.9rem
+    color: lighten($text-color, 20%)
+    margin-bottom: 3rem
+    text-align: left
+
+  .product-grid
+    @include flex(row, center, stretch)
+    flex-wrap: wrap
+    gap: 2rem
+
+    @media (max-width: 768px)
+      gap: 1.5rem
+
+    @media (max-width: 576px)
+      flex-direction: column
+      align-items: center
+
+  .product-card
+    width: calc(33.333% - 1.34rem)
+    overflow: hidden
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09)
+    transition: transform $transition-speed, background-color $transition-speed
+    background-color: $white
+    position: relative
+
+    @media (max-width: 992px)
+      width: calc(50% - 1rem)
+
+    @media (max-width: 576px)
+      width: 100%
+      max-width: 350px
+
+      h3, .price
+        color: $text-color
+
+      .add-to-cart
+        background-color: $white
+        border: solid 1px $primary-color
+        color: $primary-color
+
+    img
+      width: 100%
+      height: 220px
+      object-fit: contain
+      background-color: #f9f9f9
+      padding: 1rem
+
+    img:hover
+      background-color: #fffd97
+
+    .price
+      position: absolute
+      top: 190px
+      right: 140px
+      background-color: $white
+      color: $text-color
+      padding: 1.2rem 1.2rem
+      border-radius: 100%
+      font-weight: 700
+      transition: background-color $transition-speed, color $transition-speed
+
+    h3
+      font-size: 1.2rem
+      font-weight: 600
+      color: $text-color
+      margin: 1.5rem 0 1rem
+      transition: color $transition-speed
+
+    .add-to-cart
+      display: inline-block
+      color: $primary-color
+      padding: 0.6rem 1.5rem
+      text-decoration: none
+      border: 1px $primary-color solid
+      border-radius: 25px
+      font-weight: 500
+      cursor: pointer
+      margin-bottom: 1.5rem
+      transition: background-color $transition-speed, color $transition-speed
+
+// =======================
+// Services Section
+// =======================
+.services
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-start
+  padding: 60px 20px
+  max-width: 1200px
+  margin: 0 auto
+  text-align: left
+
+  h2
+    font-size: 2rem
+    font-weight: 700
+    color: $text-color
+    margin-bottom: 0.5rem
+    position: relative
+    text-align: left
+    width: 100%
+
+    &::after
+      content: ''
+      position: absolute
+      width: 80px
+      height: 4px
+      background-color: rgba($primary-color, 0.4)
+      bottom: -10px
+      left: 0
+
+  > p
+    color: #555
+    font-size: 1.1rem
+    margin-bottom: 40px
+    text-align: left
+    width: 100%
+
+  .feature-cards
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: stretch
+    gap: 30px
+    margin-bottom: 40px
+    flex-wrap: wrap
+    width: 100%
+
+    .feature-card
+      flex: 1
+      min-width: 280px
+      max-width: 350px
+      padding: 15px 15px
+      border: 1px solid #f8c9dd
+      border-radius: 5px
+      transition: transform $transition-speed, box-shadow $transition-speed
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      transform: translateY(-5px)
+      text-align: left
+
+      .icon
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-bottom: 15px
+        text-align: left
+
+        img
+          width: 20px
+          height: auto
+          margin-right: 10px
+
+        h3
+          color: $text-color
+          font-size: 1.1rem
+          font-weight: 600
+          margin: 0
+          text-align: left
+
+      p
+        color: #555
+        font-size: 0.85rem
+        line-height: 1.4
+        text-align: left
+
+  .read-more
+    display: inline-block
+    background-color: $primary-color
+    color: $white
+    padding: 0.7rem 1.8rem
+    border-radius: 30px
+    text-decoration: none
+    font-weight: 500
+    transition: background-color $transition-speed, transform $transition-speed
+    margin: 0 auto
+    align-self: center
+
+    &:hover
+      background-color: darken($primary-color, 10%)
+      transform: translateY(-3px)
+      box-shadow: 0 4px 10px rgba($primary-color, 0.3)
+
+    &:active
+      transform: translateY(-1px)
+
+
+
+
+.testimonial-section
+  background: #fff
+  padding: 60px 20px
+  text-align: center
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05)
+
+  .section-title
+    font-size: 2rem
+    margin-bottom: 40px
+    color: #333
+
+  .testimonial-carousel
+    position: relative
+    max-width: 800px
+    margin: auto
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) // Ombre ajoutée
+
+    .testimonial-slides
+      display: flex
+      overflow: hidden
+      position: relative
+
+      .testimonial-slide
+        flex: 0 0 100%
+        max-width: 100%
+        opacity: 0
+        transition: opacity 0.5s ease-in-out
+        position: absolute
+        top: 0
+        left: 0
+
+        &.active
+          opacity: 1
+          position: relative
+
+        .testimonial-text
+          font-style: italic
+          color: #555
+          font-size: 1.1rem
+          margin-bottom: 20px
+          padding: 0 20px
+
+        .testimonial-author
+          position: relative
+          min-height: 130px // Laisse de la place pour l'image
+
+          .author-image
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            width: 100px
+            height: 100px
+            object-fit: cover
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
+
+          .author-name
+            margin-top: 120px
+            font-size: 1.2rem
+            font-weight: bold
+            color: #333
+
+    .carousel-btn
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      background-color: #f7a9c4
+      border: none
+      color: #fff
+      font-size: 1.5rem
+      padding: 10px 15px
+      cursor: pointer
+      border-radius: 0 // carré
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
+      transition: background 0.3s
+
+      &:hover
+        background-color: #e6679f
+
+      &.prev-btn
+        left: -30px
+
+      &.next-btn
+        right: -30px
+
+
+// Contact Section Styles
+.contact
+  background-color: $dark-bg
+  color: $light-text
+  padding: 60px 0
+  font-family: 'Arial', sans-serif
+  margin-bottom: 50px
+  margin-top: 50px
+  
+  h2
+    text-align: center
+    font-size: 28px
+    margin-bottom: 40px
+    font-weight: 500
+    position: relative
+    
+    &:after
+      content: ''
+      position: absolute
+      bottom: -10px
+      left: 50%
+      transform: translateX(-50%)
+      width: 80px
+      height: 2px
+      background-color: $primary-color
+
+  .contact-content
+    display: flex
+    max-width: 1140px
+    margin: 0 auto
+    
+    @media (max-width: 768px)
+      flex-direction: column
+
+  form
+    flex: 1
+    padding-right: 40px
+    
+    @media (max-width: 768px)
+      padding-right: 0
+      margin-bottom: 40px
+
+  .form-group
+    margin-bottom: 20px
+    
+    label
+      display: block
+      margin-bottom: 8px
+      font-size: 14px
+      letter-spacing: 1px
+      color: rgba(255, 255, 255, 0.7)
+    
+    input, textarea
+      width: 100%
+      background-color: $input-bg
+      border: none
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+      padding: 12px 10px
+      color: $light-text
+      font-size: 16px
+      
+      &:focus
+        outline: none
+        border-bottom-color: $primary-color
+    
+    textarea
+      min-height: 100px
+      resize: vertical
+
+  .send-button
+    background-color: $primary-color
+    color: $light-text
+    border: none
+    padding: 12px 30px
+    font-size: 16px
+    cursor: pointer
+    transition: all 0.3s ease
+    
+    &:hover
+      background-color: darken($primary-color, 10%)
+
+  .contact-info
+    flex: 1
+    padding-left: 40px
+    border-left: 1px solid rgba(255, 255, 255, 0.1)
+    
+    @media (max-width: 768px)
+      padding-left: 0
+      border-left: none
+    
+    .info
+      margin-bottom: 25px
+      
+      p
+        position: relative
+        padding-left: 30px
+        font-size: 16px
+        line-height: 1.6
+        
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+          width: 20px
+          height: 20px
+          background-size: contain
+          background-repeat: no-repeat
+    
+    .info:nth-child(1) p:before
+      background-image: url('path/to/location-icon.svg')
+    
+    .info:nth-child(2) p:before
+      background-image: url('path/to/phone-icon.svg')
+    
+    .info:nth-child(3) p:before
+      background-image: url('path/to/email-icon.svg')
+
+  .newsletter
+    margin-top: 40px
+    
+    h3
+      font-size: 20px
+      margin-bottom: 15px
+      font-weight: normal
+    
+    form
+      display: flex
+      padding-right: 0
+      margin-bottom: 25px
+      
+      input
+        flex: 1
+        background-color: $input-bg
+        border: none
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+        padding: 12px
+        color: $light-text
+        font-size: 14px
+        
+        &::placeholder
+          color: rgba(255, 255, 255, 0.5)
+      
+      button
+        background-color: $primary-color
+        color: $light-text
+        border: none
+        padding: 12px 20px
+        font-size: 14px
+        cursor: pointer
+        white-space: nowrap
+
+  .social-links
+    display: flex
+    justify-content: flex-start
+    margin-top: 20px
+    
+    a.social-icon
+      display: flex
+      align-items: center
+      justify-content: center
+      width: $social-icon-size
+      height: $social-icon-size
+      background-color: #fff
+      border-radius: 50%
+      margin-right: 15px
+      color: $dark-bg
+      text-decoration: none
+      font-size: 0
+      transition: all 0.3s ease
+      
+      &:hover
+        background-color: $primary-color
+      
+      &:after
+        content: ''
+        display: block
+        width: 20px
+        height: 20px
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+      
+.site-header
+  background-color: white
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05)
+  
+  .container
+    max-width: 1140px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 15px 0
+  
+  .logo
+    font-size: 24px
+    font-weight: bold
+    
+    span
+      color: $primary-color
+  
+  .nav-menu
+    display: flex
+    
+    a
+      margin: 0 15px
+      text-decoration: none
+      color: #333
+      position: relative
+      
+      &.active
+        color: $primary-color
+      
+      &:after
+        content: ''
+        position: absolute
+        bottom: -5px
+        left: 0
+        width: 0
+        height: 2px
+        background-color: $primary-color
+        transition: width 0.3s ease
+      
+      &:hover:after
+        width: 100%
+  
+  .login-btn
+    display: flex
+    align-items: center
+    
+    a
+      text-decoration: none
+      color: #333
+      margin-right: 15px
+    
+    .theme-toggle
+      width: 24px
+      height: 24px
+      cursor: pointer
+
+footer
+  padding: 20px 0
+  text-align: center
+  background-color: $dark-bg
+  color: rgba(255, 255, 255, 0.6)
+  font-size: 14px
+
+
+.modal
+  display: none
+  position: fixed
+  z-index: 999
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.6)
+  justify-content: center
+  align-items: center
+
+.modal.show
+  display: flex
+  animation: fadeIn 0.3s ease-in-out
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.modal-content
+  background-color: white
+  padding: 2rem
+  border-radius: 10px
+  width: 90%
+  max-width: 500px
+  position: relative
+
+.close-modal
+  position: absolute
+  top: 10px
+  right: 15px
+  font-size: 1.5rem
+  background: none
+  border: none
+  cursor: pointer
+
+.send-button
+  display: block
+  width: 100%
+  padding: 0.7rem
+  background-color: #ff69b4
+  color: white
+  border: none
+  border-radius: 5px
+  margin-top: 1rem
+  cursor: pointer

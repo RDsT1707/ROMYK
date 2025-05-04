@@ -1,40 +1,41 @@
-<DOCTYPE html>
-  <html lang="fr">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="./public/css/style.css" />
-      <link rel="stylesheet" href="./src/main.css">
-      <link
-        rel="stylesheet"
-        href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-      <script type="module" defer src="public/js/main.js"></script>
-      <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css"
-    </head>
-    <body>
-      <header>
-        <div class="logo">
-          <img src="./public/assets/img/logo.png" alt="" />
-          <a href="index.html"></a>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="icecream.html">Icecream</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="blog.html">Blog</a></li>
-          </ul>
-        </nav>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="./src/main.css" />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css" />
+    <script type="module" defer src="public/js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="./public/assets/img/logo.png" alt="Logo IceCream" />
+        </a>
+      </div>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="icecream.html">Icecream</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
 
-        <div class="login">
-          <a href="login.html">Login</a>
-        </div>
-        <div class="theme-toggle">
-            <i class="fa-solid fa-moon" style="color: #000000;"></i>
-            <!-- Dark/Light  -->
-        </div>
-      </header>
+      <div class="login">
+        <a href="#" id="open-login">Login</a>
+      </div>
+      <div class="theme-toggle" id="theme-toggle">
+        <i class="fa-solid fa-moon" style="color: #000000;"></i>
+      </div>
+      
+    </header>
+
 
       <main>
         <!-- cream Section -->
@@ -126,28 +127,33 @@
             </div>
           </div>
         </section>
-
         <section class="services">
           <h2>Our Ice Cream Services</h2>
           <p>tempor incididunt ut labore et dolore magna aliqua</p>
           <div class="feature-cards">
             <div class="feature-card">
-                <div class="icon"><img src="./public/assets/img/icon-1.png" alt=""></div>
+              <div class="icon">
+                <img src="./public/assets/img/icon-1.png" alt="">
                 <h3>Cookies Ice Cream</h3>
+              </div>
               <p>
                 commodo consequat. Duis aute irure dolor in reprehenderit in
                 voluptate velit esse cillum dolore eu fat
               </p>
             </div>
             <div class="feature-card">
-              <div class="icon"><img src="./public/assets/img/icon-2.png" alt=""></div>
-              <h3>Cookies Ice Cream</h3>
+              <div class="icon">
+                <img src="./public/assets/img/icon-2.png" alt="">
+                <h3>Cookies Ice Cream</h3>
+              </div>
               <p>commodo consequat. Duis aute irure dolor in reprehenderit in
                 voluptate velit esse cillum dolore eu fat</p>
             </div>
             <div class="feature-card">
-              <div class="icon"><img src="./public/assets/img/icon-1.png" alt=""></div>
-              <h3>Cookies Ice Cream</h3>
+              <div class="icon">
+                <img src="./public/assets/img/icon-1.png" alt="">
+                <h3>Cookies Ice Cream</h3>
+              </div>
               <p>
                 commodo consequat. Duis aute irure dolor in reprehenderit in
                 voluptate velit esse cillum dolore eu fat
@@ -157,81 +163,54 @@
           <a href="#" class="read-more">Read More</a>
         </section>
 
-        <!-- Testimonial Section -->
-        <div class="testimonial-section">
-          <h2>Testimonial</h2>
 
+
+
+        <di<div class="testimonial-section">
+          <h2 class="section-title">Testimonial</h2>
+        
           <div class="testimonial-carousel">
-            <!-- Carousel navigation buttons -->
-            <button class="carousel-btn prev-btn">&lt;</button>
-            <button class="carousel-btn next-btn">&gt;</button>
-
-            <!-- Testimonial slides container -->
             <div class="testimonial-slides">
               <!-- Slide 1 -->
-              <div class="testimonial-slide">
-                <div class="testimonial-content">
-                  <p>
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore
-                    eu fugiat nulla pariatur. Excepteur sint
-                  </p>
-                  <div class="testimonial-author">
-                    <h3>Marri Fen</h3>
-                    <img
-                      src="./public/assets/img/client-img.png"
-                      alt="Marri Fen"
-                      class="author-image"
-                    />
-                  </div>
+              <div class="testimonial-slide active">
+                <p class="testimonial-text">
+                  "Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                </p>
+                <div class="testimonial-author">
+                  <img src="./public/assets/img/client-img.png" alt="Marri Fen" class="author-image" />
+                  <h3 class="author-name">Marri Fen</h3>
                 </div>
               </div>
-
+        
               <!-- Slide 2 -->
               <div class="testimonial-slide">
-                <div class="testimonial-content">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <div class="testimonial-author">
-                    <h3>Marri Fen</h3>
-                    <img
-                      src="./public/assets/img/client-img.png"
-                      alt="Marri Fen"
-                      class="author-image"
-                    />
-                  </div>
+                <p class="testimonial-text">
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                </p>
+                <div class="testimonial-author">
+                  <img src="./public/assets/img/client-img.png" alt="Marri Fen" class="author-image" />
+                  <h3 class="author-name">Marri Fen</h3>
                 </div>
               </div>
-
+        
               <!-- Slide 3 -->
               <div class="testimonial-slide">
-                <div class="testimonial-content">
-                  <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </p>
-                  <div class="testimonial-author">
-                    <h3>Marri Fen</h3>
-                    <img
-                      src="./public/assets/img/client-img.png"
-                      alt="Marri Fen"
-                      class="author-image"
-                    />
-                  </div>
+                <p class="testimonial-text">
+                  "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                </p>
+                <div class="testimonial-author">
+                  <img src="./public/assets/img/client-img.png" alt="Marri Fen" class="author-image" />
+                  <h3 class="author-name">Marri Fen</h3>
                 </div>
               </div>
             </div>
+        
+            <button class="carousel-btn prev-btn">&#10094;</button>
+            <button class="carousel-btn next-btn">&#10095;</button>
           </div>
         </div>
 
+        
         <!-- Contact Form -->
         <section class="contact">
           <h2>Contact Us</h2>
@@ -283,60 +262,53 @@
           </div>
         </section>
 
-        <!-- Login -->
-        <div class="login-modal">
-          <div class="modal-content">
-            <button class="close">&times;</button>
-            <h2>Login</h2>
-            <form>
-              <div class="form-group">
-                <label for="login-email">EMAIL</label>
-                <input type="email" id="login-email" name="email" />
-              </div>
-              <div class="form-group">
-                <label for="login-password">PASSWORD</label>
-                <input type="password" id="login-password" name="password" />
-              </div>
-              <button type="submit" class="send-button">SEND</button>
-            </form>
-            <p>No account yet? <a href="#register">Register</a></p>
-          </div>
+      <!-- Modals -->
+      <div class="modal" id="login-modal" aria-hidden="true">
+        <div class="modal-content">
+          <button class="close-modal">&times;</button>
+          <h2>Connexion</h2>
+          <!-- contenu du formulaire -->
+          <button class="send-button">Se connecter</button>
+          <p><a href="#" id="open-register">Créer un compte</a></p>
         </div>
+      </div>
 
-        <!-- Register Modal -->
-        <div class="register-modal">
-          <div class="modal-content">
-            <button class="close">&times;</button>
-            <h2>Register</h2>
-            <form>
-              <div class="form-group">
-                <label for="register-name">NAME</label>
-                <input type="text" id="register-name" name="name" />
-              </div>
-              <div class="form-group">
-                <label for="register-email">EMAIL</label>
-                <input type="email" id="register-email" name="email" />
-              </div>
-              <div class="form-group">
-                <label for="register-phone">PHONE NUMBER</label>
-                <input type="tel" id="register-phone" name="phone" />
-              </div>
-              <div class="form-group">
-                <label for="register-password">PASSWORD</label>
-                <input type="password" id="register-password" name="password" />
-              </div>
-              <button type="submit" class="send-button">SEND</button>
-            </form>
-            <p>You already have account? <a href="#login">Login</a></p>
-          </div>
+      <div class="modal" id="register-modal" aria-hidden="true">
+        <div class="modal-content">
+          <button class="close-modal">&times;</button>
+          <h2>Inscription</h2>
+          <form>
+            <div class="form-group">
+              <label for="register-name">NAME</label>
+              <input type="text" id="register-name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="register-email">EMAIL</label>
+              <input type="email" id="register-email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="register-phone">PHONE NUMBER</label>
+              <input type="tel" id="register-phone" name="phone" required />
+            </div>
+            <div class="form-group">
+              <label for="register-password">PASSWORD</label>
+              <input type="password" id="register-password" name="password" required />
+            </div>
+            <button type="submit" class="send-button">S'inscrire</button>
+          </form>
+          <p>Déjà un compte ? <a href="#" id="open-login-from-register">Login</a></p>
         </div>
-      </main>
+      </div>
+    </main>
 
-      <footer>
-        <p>2025 - Projet IceCream</p>
-      </footer>
+    <footer>
+      <p>2025 - Projet IceCream</p>
+    </footer>
 
-      <script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
-      <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    </body>
-  </html>
+    <!-- Scripts -->
+    <script src="./public/js/modal.js"></script>
+    <script src="./public/assets/js/darkmode.js"></script>
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  </body>
+</html>
